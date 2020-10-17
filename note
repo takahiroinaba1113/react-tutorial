@@ -1,0 +1,87 @@
+Files and Folders 
+
+package.json
+-> contains dependencies and scripts requeried for this project
+
+package-lock.json
+-> consistency installation of dependencies 
+
+node_modules
+-> where all the dependencies are installed
+
+public 
+1. manifest.json
+2. favicon.ico
+3. index.html
+-> only hmtl file for the single page application
+-> this is the one that shows up when the app starts
+
+scr
+1. index.js
+-> ReactDOM.render to render 
+2. App.js
+-> responsible for HTML to display -> JSX
+3. App.css
+-> for styling
+4. App.test
+-> simple test for the app
+
+React 
+Components
+1. header
+2. sidenav
+3. main content
+4. footer
+5. root that nests all other Components
+-> basically in .js Files
+
+Component Types
+- Stateless funtional Components
+-> JavaScript functions that return JSX
+- stateful class Component
+-> class extends component class that has render() to return JSX
+
+Components summary
+- components describe a part of the user interface
+- reusable and can be nested inside other components 
+- two types: stateless functional components & stategul class components
+
+Functional Components 
+- JavaScript function
+- receives properties(props) that are attributes of HTML
+- return JSX (to generate HTML)
+
+Class components
+- ES6 class to return JSX (HTML)
+- it can maintain state (information that is private to the class)
+
+Functional vs Class components
+Functional
+- simple functions
+- use function approach to create components if possible
+- absence of 'this' keyword
+- solution without using state
+- mainly responsible for the UI
+- stateless/dumb/presentational
+-> now it can be stateful!!
+
+Class
+- more feature rich
+- maintain their own private data - state
+- complex UI logic
+- provide lifecycle hooks
+- stategful/state/container
+
+hooks
+- a new feature proposal that lets you use state and other React features in function
+
+JSX
+- JavaScript XML (JSX) is extension to JavaScript language syntax
+- write XML-like code for elements and components
+- JSX tags have a tag name, attributes, and children
+- JSX transpiles to pure JavaScript which is understood by browser
+- JSX differences compared to HTML
+
+props
+- immutable 
+
