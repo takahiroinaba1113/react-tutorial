@@ -4,17 +4,19 @@ import './App.css';
 import Greet from './components/Greet'
 import Welcome from './components/Welcome'
 import Hello from './components/Hello'
+import Message from './components/Message'
+import Counter from './components/Counter'
+import FunctionClick from './components/FunctionClick';
+import ClassClick from './components/ClassClick';
 
 function App() {
   return (
     <div className="App">
-      <Greet name="name1" heroName="badman"/>
-      <Greet name="nameName" heroName="superMan"/>
-      <Greet name="nameName2" heroName="superWoman"/>
-      <Welcome name="name1"/>
-      <Welcome name="name2"/>
-      <Welcome name="name3"/>
-      <Hello />
+      <FunctionClick />
+      <ClassClick />
+      <Counter addValue='1' />
+      <Greet name="Name" akaName="akaName"/>
+      <Welcome name="welcome name" akaName="welcome aka name" />
     </div>
   );
 }

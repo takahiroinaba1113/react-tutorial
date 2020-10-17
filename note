@@ -82,6 +82,25 @@ JSX
 - JSX transpiles to pure JavaScript which is understood by browser
 - JSX differences compared to HTML
 
+props vs state (both hold information that influence UI)
 props
-- immutable 
+- get passed to the component
+- function parameters
+- immutable
+- 'props' in functional components
+- 'this.props' in class components
 
+state 
+- managed within the component
+- variable declared in the function body
+- state can be changed
+- useState Hook in functional components
+- this.state in class components
+
+setSate
+- use it to modify state
+- if you want to execute some code after the state has been changed with setState, 
+place that code in the argument 'callback' (use callback funciton)
+-> it is the second argument to the setState method
+- when you have to update state based on the previous state value, 
+pass in a function as an argument instead of the regular object
