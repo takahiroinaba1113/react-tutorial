@@ -104,3 +104,23 @@ place that code in the argument 'callback' (use callback funciton)
 -> it is the second argument to the setState method
 - when you have to update state based on the previous state value, 
 pass in a function as an argument instead of the regular object
+
+Bind Event Handling
+1. bind(this) in rendering
+2. arrow function in rendering
+3. bind(this) in class constructor
+4. arrow function as a class property
+
+Method as props
+1. define function in parent 
+2. give that function as props to child as the attribute value
+3. receive the props in child, and call it by props.methodName
+4. in calling the method, pass args to it so that the parent can receive the value
+-> this requires arrow syntax
+5. use that passed value in the parent function 
+
+Conditional Rendering 
+1. if/else 
+2. element variable
+3. ternary conditional operator
+4. short circuit operator

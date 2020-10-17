@@ -8,15 +8,21 @@ import Message from './components/Message'
 import Counter from './components/Counter'
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
+import EventBind from './components/EventBind'
+import ParentComponent from './components/ParentComponent'
+import UserGreeting from './components/UserGreeting';
 
 function App() {
   return (
     <div className="App">
-      <FunctionClick />
+      <UserGreeting />
+      {/* <ParentComponent /> */}
+      {/* <EventBind /> */}
+      {/* <FunctionClick />
       <ClassClick />
       <Counter addValue='1' />
       <Greet name="Name" akaName="akaName"/>
-      <Welcome name="welcome name" akaName="welcome aka name" />
+      <Welcome name="welcome name" akaName="welcome aka name" /> */}
     </div>
   );
 }
