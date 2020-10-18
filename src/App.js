@@ -11,11 +11,25 @@ import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind'
 import ParentComponent from './components/ParentComponent'
 import UserGreeting from './components/UserGreeting';
-
+import List from './components/List'
+import StyleSheet from './components/StyleSheet';
+import Inline from './components/Inline'
+import './appStyles.css'
+import styles from './appStyles.module.css'
+import Form from './components/Form';
+import LifecycleA from './components/LifecycleA'
+ 
 function App() {
   return (
     <div className="App">
-      <UserGreeting />
+      <LifecycleA /> 
+      {/* <Form /> */}
+      {/* <h1 className='error'>error styling with appStyles.css</h1>
+      <h1 className={styles.success}>success styling with appStyles.module.css</h1>
+      <Inline /> */}
+      {/* <StyleSheet primary={true}/> */}
+      {/* <List /> */}
+      {/* <UserGreeting /> */}
       {/* <ParentComponent /> */}
       {/* <EventBind /> */}
       {/* <FunctionClick />

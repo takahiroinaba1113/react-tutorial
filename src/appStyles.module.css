@@ -1,0 +1,7 @@
+/* example of styling with css.module
+this styling does not work globally,
+since it uses a variable to style */
+
+.success {
+    color: green
+}

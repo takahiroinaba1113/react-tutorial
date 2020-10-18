@@ -124,3 +124,111 @@ Conditional Rendering
 2. element variable
 3. ternary conditional operator
 4. short circuit operator
+
+List Rendering
+- map(): the method that creates a new array with the result of calling a provided function on every element in the calling array
+e.g.
+var array1 = [1, 3, 5, 6];
+// take each element of array and execute the function specified in the arg (arrow func)
+const map1 = array1.map(x => x * 2);
+map1 is now expected to be a new array of [2, 6, 10, 12]
+
+Lists and Keys
+- list without key attribute
+-> React compares lists in parent and child component 
+- list with key attribute
+-> React compares lists 
+- 'key' is a special string attribute you need to include when creating lists of elements
+- keys give the elemenet a stable identity
+- keys help React identify which items have changed, are added, or are removed
+-> in sum, keys help efficient update of the UI
+
+Index as Keys anti-pattern
+- items in a list do not have a unique ID 
+- the list is a static and will not change
+- the list will never be reordered or filtered
+-> soring and filtering will mess up the values 
+
+Styling React Components
+- CSS 
+- inline styling
+- CSS node_modules
+- CSS in JS library
+
+Controlled Components
+when you want to change state according to user input
+1. craete JSX (HTML) to display UI and receive input
+-> value, onChange attributes are needed to receive the value and trigger setState method
+2. add the object in the state in the constructor
+3. define handler method that has setState 
+-> this handler receives 'event' that contains all info from the event
+-> to use the value in event, use event.target.value 
+-> set this event.target.value to the object that you want to set the state of
+
+Lifecycle Methods for class components (build-in methods)
+1. Mounting:
+when an instance of a component is being created 
+and iserted into the DOM
+-> Methods
+constructor(props):
+- called whenever a new component is created
+- initializing state
+- binding the event handlers
+
+static getDerivedStateFromProps(props, state) -> rarely used
+- when the state of the component depedens on changes in props over time
+- set the state
+
+render ()
+- only required method in class component
+- read props & state and return JSX
+
+componentDidMount()
+- invoked immediately after a component 
+and its children components have beeen rendered to the DOM
+- cause side effects: e.g. interact with the DOM or perform any ajax calls to load data
+
+
+2. Updating:
+when an component is being re-rendered 
+as a result of changes to either its props or state
+-> Methods
+static getDerivedStateFromProps(props, state)
+- called every time a component is re-rendered
+- set the state
+
+shouldComponentUpdate(nextProps, nextState)
+- dictates if the component should re-render or not
+- performance optimization
+- return true or false to let React know if it should update component or not
+
+render
+- read props & state and return JSX
+
+getSnapshotBeforeUpdate(prevProps, prevState) -> rarely used
+- called right before the changes from the virtual DOM are to be reflected in the DOM
+- capture some info from the DOM
+- return null or a value. returned value will be passed as the third param to the next method
+
+compnentDidUpdate(prevProps, prevState, snapshot)
+- called after the render is finished in the re-render cycles
+- cause side effects
+
+
+3. Unmounting:
+when a component is being removed from the DOM
+-> Method
+componentWillUnmount()
+- invoked immediately before a component is unmounted and destroyed
+- cancelling any network requests, removing event handlers, 
+cancelling any subscriptions and also invalidating timers
+
+4. Error Handling:
+when there is an error during rendering, 
+in a lifecycle method, or in the constructor of any child component
+-> Methods
+static getDerivedStateFromError(error)
+- 
+
+componentDidCatch(error, info)
+- 

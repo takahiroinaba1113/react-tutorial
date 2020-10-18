@@ -1,0 +1,5 @@
+/* this way of styling works globally, 
+meaning this can also be used in child components */
+.error{
+    color: rebeccapurple   
+}
