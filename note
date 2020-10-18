@@ -232,3 +232,24 @@ static getDerivedStateFromError(error)
 
 componentDidCatch(error, info)
 - 
+
+Fragment
+- removing unnecessary <div> tags
+
+Pure Components vs Regular Component
+Pure Component:
+- implements shouldComponentUpdate with a shallow props and state comparison
+-> SC of prevState with currentState
+-> SC of prevProps with currentProps
+
+-> by shallow comparison, it regulates the frequency of re-rendering which could improve efficiency
+BUT, unless you see some performance hinderance by regular components, just stick to regular components
+
+Regular Component:
+- not implement the shouldComponentUpdate method. it always returns true by default
+
+Shallow comparison
+- primitive types
+-> if a and b have the same value and are of the same type, return true
+- complex types 
+-> if a and b reference the exact same object, return true
