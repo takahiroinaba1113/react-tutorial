@@ -241,6 +241,7 @@ Pure Component:
 - implements shouldComponentUpdate with a shallow props and state comparison
 -> SC of prevState with currentState
 -> SC of prevProps with currentProps
+- work only with class component
 
 -> by shallow comparison, it regulates the frequency of re-rendering which could improve efficiency
 BUT, unless you see some performance hinderance by regular components, just stick to regular components
@@ -253,3 +254,44 @@ Shallow comparison
 -> if a and b have the same value and are of the same type, return true
 - complex types 
 -> if a and b reference the exact same object, return true
+
+Memo - function counterpart to pure component of class 
+
+Refs
+- a function provided by React to access the DOM element 
+and the React element that you might have created on your own
+- used in cases where you want to change the value of a child component, without making use of props and all
+- two ways to use Refs: React.createRef() & Callback Refs
+- forwarding Refs
+-> automatically passing ref thru components to one of its children
+
+Portals
+- it allows you to render children into any DOM node 
+that exits outside the DOM hierachy of the parent component
+-> ReactDOM.create(child, container)
+the first argument (child) is any renderable React child
+the second argument (container) is a DOM element
+
+Error Boundaries
+- React components that catch JavaScript errors anywhere in their child component tree,
+log those errors, and display a fallback UI instead of the component tree that crashed. 
+- catch errors during rendering, in lifecycle methods, 
+and in constructors of the whole tree below them
+- a class component becomes an Error Boundary by defining either or both of getDerivedStateFromError 
+and componentDidCatch lifecycle methods
+-> place the component as a parent component so that errors happen inside the child component tree
+will now go to the error boundary component
+
+- two methods:
+-> static getDerivedStateFromError(error)
+- used to render a fallback UI after an error is thrown
+-> componentDidCatch(error, info)
+- used to log the error information
+
+
+Higher-Order-Components
+
+Render props
+
+Context
+
