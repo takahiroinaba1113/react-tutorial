@@ -290,6 +290,11 @@ will now go to the error boundary component
 
 
 Higher-Order-Components
+- a pattern where a function takes a component as an argument and returns a new component
+e.g. const NewComponent = higherOrderComponent(originalComponent)
+e.g. const EnhancedComponent = higherOrderComponent(originalComponent)
+
+- to share common functionality between Components
 
 Render props
 
